@@ -1,16 +1,24 @@
 <!-- home.component.html -->
 <div *ngIf="episodeData; else loading">
     <ul>
-      <div *ngFor="let episode of episodeData">
-        <li>
+      <li *ngFor="let episode of episodeData">
+        <div>
           {{ episode.name }}
-          <button (click)="onFetchCharacters(episode)">Ver personajes</button>
-        </li>
-      </div>
+          <!-- Botón para obtener los personajes -->
+          <button (click)="onFetchCharacters(episode)">Mostrar Personajes</button>
+        </div>
+        <!-- Mostrar los personajes del episodio -->
+        <div *ngIf="episode.characters && episode.characters.length > 0">
+          <ul>
+            <li *ngFor="let character of episode.characters">
+              {{ character.name }}
+            </li>
+          </ul>
+        </div>
+      </li>
     </ul>
   </div>
   
   <ng-template #loading>
     <p>Cargando episodios...</p>
   </ng-template>
-  

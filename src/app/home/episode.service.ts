@@ -19,10 +19,10 @@ export class EpisodeService {
     );
   }
   obtenerPersonajesPorEpisodio(urls: string[]): Observable<Character[]> {
-    if (urls && Array.isArray(urls) && urls.length > 0) {
+    if (urls && urls.length > 0) {
       return this.http.get<Character[]>(urls.join(','));
     } else {
-        return new Observable<Character[]>();
+      return new Observable<Character[]>();
     }
   }
 
