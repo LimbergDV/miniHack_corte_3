@@ -1,1 +1,14 @@
-<p>home works!</p>
+<!-- home.component.html -->
+<div *ngIf="episodeData; else loading">
+    <ul>
+        <div *ngFor="let episode of episodeData">
+            {{ episode.name }}
+          </div>
+              
+    </ul>
+  </div>
+  
+  <ng-template #loading>
+    <p>Cargando episodios...</p>
+  </ng-template>
+  
