@@ -69,10 +69,10 @@
 .fav img{
   height: 70px;
   width: 70px;
-  color: red;
   margin-left: 5vh;
   position: absolute;
   margin-top: -5vh;
+  filter: invert(25%) sepia(100%) saturate(600%) hue-rotate(90deg) brightness(100%) contrast(90%);
 }
 
 .fav{
