@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';  // Importa HttpClientM
 
 import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
-import { HttpClient,  } from '@angular/common/http';
 import { CardsModule } from './cards/cards.module';
 
 @NgModule({
@@ -15,7 +14,10 @@ import { CardsModule } from './cards/cards.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HomeModule,
+    CardsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
