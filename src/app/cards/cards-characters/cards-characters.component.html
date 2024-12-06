@@ -14,7 +14,7 @@
     <h2>{{ selectedCharacter.name }}</h2>
     <img [src]="selectedCharacter.image" [alt]="selectedCharacter.name" />
     <p>Origin: {{ selectedCharacter.origin.name }}</p>
-    <button (click)="closeModal()">Close Modal</button>
+    <button class="closeModal-btn" (click)="closeModal()">Close Modal</button>
     <button class="fav"><img src="fav.svg" alt=""></button>
   </div>
 </div>

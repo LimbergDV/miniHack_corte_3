@@ -67,8 +67,28 @@
 }
 
 .fav img{
+  height: 70px;
+  width: 70px;
+  color: red;
+  margin-left: 5vh;
+  position: absolute;
+  margin-top: -5vh;
+}
+
+.fav{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeModal-btn {
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  color: white;
   height: 60px;
-  width: 60px;
+  width: 100px;
+  border-radius: 10px;
 }
 .datails{
   width: auto;
