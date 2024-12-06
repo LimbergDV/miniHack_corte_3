@@ -70,3 +70,11 @@
   height: 60px;
   width: 60px;
 }
+.datails{
+  width: auto;
+  height: 50px;
+  color: white;
+  background-color: blue;
+  border: none;
+  cursor: pointer;
+}
