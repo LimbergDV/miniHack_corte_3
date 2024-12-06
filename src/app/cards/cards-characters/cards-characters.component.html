@@ -5,22 +5,17 @@
     <p>Status: {{ character.status }}</p>
     <p>Species: {{ character.species }}</p>
     <p>Gender: {{ character.gender }}</p>
-    <p>Origin: {{ character.origin.name }}</p>
     <button (click)="openModal(character)">See Details</button>
   </div>
 </div>
 
 <div *ngIf="selectedCharacter" class="modal">
   <div class="modal-content">
-    <span class="close" (click)="closeModal()">&times;</span>
     <h2>{{ selectedCharacter.name }}</h2>
     <img [src]="selectedCharacter.image" [alt]="selectedCharacter.name" />
-    <p>Status: {{ selectedCharacter.status }}</p>
-    <p>Species: {{ selectedCharacter.species }}</p>
-    <p>Gender: {{ selectedCharacter.gender }}</p>
     <p>Origin: {{ selectedCharacter.origin.name }}</p>
-    <button>Cerrar</button>
-    <button></button>
+    <button (click)="closeModal()">Close Modal</button>
+    <button class="fav"><img src="fav.svg" alt=""></button>
   </div>
 </div>
 
