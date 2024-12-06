@@ -1,9 +1,12 @@
+<!-- home.component.html -->
 <div *ngIf="episodeData; else loading">
     <ul>
-        <div *ngFor="let episode of episodeData">
-            {{ episode.name }}
-          </div>
-          
+      <div *ngFor="let episode of episodeData">
+        <li>
+          {{ episode.name }}
+          <button (click)="onFetchCharacters(episode)">Ver personajes</button>
+        </li>
+      </div>
     </ul>
   </div>
   
