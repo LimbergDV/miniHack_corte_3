@@ -13,4 +13,13 @@ export class CharacterService {
   getAllCharacters():Observable<any>{
     return this._http.get<any>(`${this._apiUrl}/character`);
   }
+
+  getCharactersByEpisode(episodeId: number): Observable<any> {
+    return this._http.get(`${this._apiUrl}/episode/${episodeId}`);
+  }
+  
+  getCharacterByUrl(url: string): Observable<any> {
+    return this._http.get(url);
+  }
+
 }

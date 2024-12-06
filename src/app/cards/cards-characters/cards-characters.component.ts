@@ -9,6 +9,7 @@ import { CharacterService } from '../../service/character.service';
 export class CardsCharactersComponent implements OnInit {
   characters: any[] = [];
   selectedCharacter: any = null;
+  currentEpisode: number = 1;
 
   constructor(private caractersService: CharacterService) {}
 
