@@ -1,0 +1,26 @@
+<div class="card-container">
+  <div class="card" *ngFor="let character of characters">
+    <img [src]="character.image" [alt]="character.name" class="card-image" />
+    <h2>{{ character.name }}</h2>
+    <p>Status: {{ character.status }}</p>
+    <p>Species: {{ character.species }}</p>
+    <p>Gender: {{ character.gender }}</p>
+    <button class="datails" (click)="openModal(character)">See Details</button>
+  </div>
+</div>
+
+<div *ngIf="selectedCharacter" class="modal">
+  <div class="modal-content">
+    <h2>{{ selectedCharacter.name }}</h2>
+    <img [src]="selectedCharacter.image" [alt]="selectedCharacter.name" />
+    <p>Origin: {{ selectedCharacter.origin.name }}</p>
+    <button class="closeModal-btn" (click)="closeModal()">Close Modal</button>
+    <button class="fav"><img src="fav.svg" alt=""></button>
+  </div>
+</div>
+
+<div class="controls">
+  <button>Anterior</button>
+  <span>Episodio:</span>
+  <button>Siguiente</button>
+</div>
